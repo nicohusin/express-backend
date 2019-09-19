@@ -13,6 +13,6 @@ app.use("/user" , routeUser )
 
 app.get("/" , (req, res, next) => res.send("Ohaiyo!"));
 
-app.listen(3000, () => 
-  console.log("Express server is ready on localhost 3000")
+app.listen(PORT, () => 
+  console.log(`Express server is ready on localhost ${PORT}`)
 );
