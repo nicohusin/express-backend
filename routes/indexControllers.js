@@ -9,7 +9,7 @@ module.exports = {
 
   postUser: (req, res, next) => {
     try {
-      let userId = user.length;
+      let userId = Users.length;
 
       Users.push({
         id: userId + 1,
@@ -27,12 +27,15 @@ module.exports = {
   },
   deleteUserById: (req, res, next) => {
     try {
-      const idUser = user.findIndex(element => element.id == req.params.id);
-      user.splice(idUser, 1);
+      const idUser = Users.findIndex(
+        element => element.id === parseInt(req.params.id)
+      );
+      Users.splice(idUser, 1);
       res.send({
         Users
       });
     } catch (error) {
+      console.log(error);
       res.send({
         message: "error to delete user by id",
         error
