@@ -5,7 +5,7 @@ const user = [
   },
   {
     id: 2,
-    name: "husin"
+    name: "husinn"
   }
 ]
 
