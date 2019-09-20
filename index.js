@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express()
-const routeUser = require('./routes/users') 
+const routeUser = require('./routes/index') 
 const bodyParser = require('express')
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({extended : false})

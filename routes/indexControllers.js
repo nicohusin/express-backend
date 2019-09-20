@@ -3,12 +3,10 @@ const Users = require("../data/user");
 module.exports = {
   getAll: (req, res, next) => {
     res.send({
-      Users
+      data: Users
     });
-  }
-};
+  },
 
-module.exports = {
   postUser: (req, res, next) => {
     try {
       let userId = user.length;
@@ -26,10 +24,7 @@ module.exports = {
         error
       });
     }
-  }
-};
-
-module.exports = {
+  },
   deleteUserById: (req, res, next) => {
     try {
       const idUser = user.findIndex(element => element.id == req.params.id);
